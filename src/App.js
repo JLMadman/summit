@@ -1,6 +1,7 @@
 import { Asin } from './components/asin';
 import { CaseId } from './components/caseId';
 import { OrderId } from './components/orderId';
+import { BuyerLauncher } from './components/buyerLauncher';
 import { Links } from './components/links';
 
 import './App.css';
@@ -23,7 +24,10 @@ function App() {
         </GridCell>
         <GridCell>
           <Asin />
-        </GridCell>
+          </GridCell>
+        <GridCell>
+          <BuyerLauncher />
+       </GridCell>
       </GridRow>
       <GridRow>
         <GridCell>
