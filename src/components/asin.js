@@ -25,53 +25,52 @@ const countries = [
 ];
 
 export const generateLoadLink = (org, idArray) => {
-  let domain = ''
+  let domain = "";
   switch (org) {
-    case 'US':
-      domain = 'https://www.amazon.com/'
+    case "US":
+      domain = "https://www.amazon.com/";
       break;
-    case 'CA':
-      domain = 'https://www.amazon.ca/'
+    case "CA":
+      domain = "https://www.amazon.ca/";
       break;
-    case 'MX':
-      domain = 'https://www.amazon.com.mx/'
+    case "MX":
+      domain = "https://www.amazon.com.mx/";
       break;
-    case 'UK':
-      domain = 'https://www.amazon.co.uk/'
+    case "UK":
+      domain = "https://www.amazon.co.uk/";
       break;
-    case 'FR':
-      domain = 'https://www.amazon.fr/'
+    case "FR":
+      domain = "https://www.amazon.fr/";
       break;
-      case 'DE':
-      domain = 'https://www.amazon.de/'
+    case "DE":
+      domain = "https://www.amazon.de/";
       break;
-      case 'IT':
-      domain = 'https://www.amazon.it/'
+    case "IT":
+      domain = "https://www.amazon.it/";
       break;
-      case 'ES':
-      domain = 'https://www.amazon.es/'
+    case "ES":
+      domain = "https://www.amazon.es/";
       break;
-      case 'IN':
-      domain = 'https://www.amazon.in/'
+    case "IN":
+      domain = "https://www.amazon.in/";
       break;
-      case 'TR':
-      domain = 'https://www.amazon.com.tr/'
+    case "TR":
+      domain = "https://www.amazon.com.tr/";
       break;
-      case 'JP':
-      domain = 'https://www.amazon.co.jp/'
+    case "JP":
+      domain = "https://www.amazon.co.jp/";
       break;
-      case 'CN':
-      domain = 'https://www.amazon.cn/'
+    case "CN":
+      domain = "https://www.amazon.cn/";
       break;
-      case 'AU':
-      domain = 'https://www.amazon.com.au/'
+    case "AU":
+      domain = "https://www.amazon.com.au/";
       break;
     default:
-      return ''
+      return "";
   }
-  return idArray.map(id => `${domain}dp/${id}`)
-}
-
+  return idArray.map((id) => `${domain}dp/${id}`);
+};
 
 export const Asin = () => {
   const [org, setOrg] = useState();
@@ -80,13 +79,15 @@ export const Asin = () => {
   const handleLoadClick = (e) => {
     e.preventDefault();
     const idArray = ids.split("\n").filter((possibleId) => possibleId.length);
-    generateLoadLink(org, idArray).forEach(link => window.open(link, '_blank'))
+    generateLoadLink(org, idArray).forEach((link) =>
+      window.open(link, "_blank")
+    );
   };
 
   return (
     <div>
       <form>
-        <div style={{marginTop: "22px", marginBottom: "10px" }}>
+        <div style={{ marginTop: "22px", marginBottom: "10px" }}>
           <TextField
             value={ids}
             onChange={(e) => setIds(e.currentTarget.value)}
@@ -97,7 +98,6 @@ export const Asin = () => {
             label="Enter ASINs in separate lines"
             rows={6}
             characterCount
-            
           />
         </div>
         <div>

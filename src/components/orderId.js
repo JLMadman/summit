@@ -19,7 +19,16 @@ const countries = [
   { country: "ES", encryptedMarketplaceId: "A1RKKUPIHCS9HS" },
   { country: "IN", encryptedMarketplaceId: "A21TJRUUN4KGV" },
   { country: "TR", encryptedMarketplaceId: "A33AVAJ2PDY3EV" },
+  { country: "AE", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { country: "BE", encryptedMarketplaceId: "AMEN7PMS3EDWL" },
+  { country: "EG", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { country: "NL", encryptedMarketplaceId: "A1805IZSGTT6HS" },
+  { country: "PL", encryptedMarketplaceId: "A1C3SOZRARQ6R3" },
+  { country: "SA", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { country: "SE", encryptedMarketplaceId: "A2NODRKZP88ZB9" },
   { country: "JP", encryptedMarketplaceId: "A75P1MG8VMU51" },
+  { country: "AU", encryptedMarketplaceId: "A75P1MG8VMU51" },
+  { country: "SG", encryptedMarketplaceId: "A75P1MG8VMU51" },
 ];
 
 export const generateLoadLink = (org, idArray) => {
@@ -58,11 +67,38 @@ export const generateLoadLink = (org, idArray) => {
     case "TR":
       domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
       break;
+    case "AE":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "BE":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "EG":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "NL":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "PL":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "SA":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "SE":
+      domain = "https://paragon-eu.amazon.com/hz/view-investigation-lookup";
+      break;
     case "JP":
       domain = "https://paragon-fe.amazon.com/hz/view-investigation-lookup";
       break;
+    case "AU":
+      domain = "https://paragon-fe.amazon.com/hz/view-investigation-lookup";
+      break;
+    case "SG":
+      domain = "https://paragon-fe.amazon.com/hz/view-investigation-lookup";
+      break;
     default:
-      return ''
+      return "";
   }
   return idArray.map((id) => {
     const isOrderId = id.toString().includes("-");
@@ -97,7 +133,6 @@ export const OrderId = () => {
             label="Enter Seller IDs / Order IDs in separate lines"
             rows={6}
             characterCount
-            
           />
         </div>
         <div>
