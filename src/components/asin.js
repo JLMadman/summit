@@ -44,6 +44,9 @@ export const generateLoadLink = (org, idArray) => {
     case "MX":
       domain = "https://www.amazon.com.mx/";
       break;
+       case "BR":
+      domain = "https://www.amazon.com.br/";
+      break;
     case "UK":
       domain = "https://www.amazon.co.uk/";
       break;
