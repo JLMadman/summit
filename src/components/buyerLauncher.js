@@ -33,23 +33,11 @@ const countries = [
 ];
 const buyerOptions = [
   {
-    label: "Customer ID - SUMMIT",
+    label: "Customer ID",
     value: "bri-search-by-customer-id",
     tabIndex: -1,
     searchScopeId: "bri-search-by-customer-id",
     program: "BRI",
-  },
-  {
-    label: "Customer ID - B2B",
-    value: "abuse-b2b-investigation-page",
-    searchScopeId: "b2b-search-by-customer-id-with-outcomes",
-    program: "AbusePrevention",
-  },
-  {
-    label: "Customer ID - Concessions",
-    value: "abuse-concessions-investigation-page",
-    searchScopeId: "concessions-search-by-customer-id-read-only",
-    program: "AbusePrevention",
   },
 ];
 
