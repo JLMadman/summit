@@ -9,8 +9,8 @@ import "@rmwc/textfield/styles";
 import "@rmwc/button/styles";
 
 const countries = [
-  "US",
-  "CA",
+  "US 1",
+  "CA 7",
   "MX",
   "BR",
   "AE",
@@ -25,7 +25,7 @@ const countries = [
   "SA",
   "SE",
   "TR",
-  "UK",
+  "UK 3",
   "IN",
   "AU",
   "JP",
@@ -122,7 +122,7 @@ export const generateLoadLink = (
     } else if (org === "AU") {
       pageContext.marketplaceId = "111172";
     } else if (org === "JP") {
-      pageContext.marketplaceId = "7";
+      pageContext.marketplaceId = "6";
     } else if (org === "SG") {
       pageContext.marketplaceId = "104444012";
     }
