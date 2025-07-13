@@ -21,11 +21,11 @@ export const linkTable = [
       name: "GC Explorer NA",
       link: "https://gchelper-na.amazon.com/gcexplorer/",
     },
-    { name: "Camshaft NA", link: "https://camweb-na.amazon.com/" },
+    { name: "Camshaft NA", link: "https://na-prod.spice.sps.amazon.dev/accountHolder" },
     { name: "CamelCamel", link: "https://camelcamelcamel.com/" },
     {
-      name: "TT Wiki",
-      link: "https://w.amazon.com/bin/view/BadActorDisincentives/TT/Processes/",
+      name: "FF Smartsheet",
+      link: "https://app.smartsheet.com/browse/workspaces",
     },
   ],
   [
@@ -37,35 +37,35 @@ export const linkTable = [
     { name: "WhoIs", link: "https://www.whois.com/whois/" },
     { name: "Amazon Wiki", link: "https://w.amazon.com/bin/view/Main/" },
     {
-      name: "SUMMIT Watson",
-      link: "https://share.amazon.com/sites/amazonwatson/SUMMIT/SOPs/SUMMIT_Watson_Homepage.aspx",
+      name: "FF Enforcement Tracking",
+      link: "https://us-east-1.quicksight.aws.amazon.com/sn/account/amazonbi/dashboards/c6a2ef14-cda5-4088-b9b2-c4925e7922bd/sheets/c6a2ef14-cda5-4088-b9b2-c4925e7922bd_fb5a7c2b-18e9-4d7a-bd2c-c077973a8e61?#",
     },
     {
-      name: "Spider Script",
-      link: "https://w.amazon.com/bin/view/SPIDER-_BRI_(Buyer_Risk_Investigations)",
+      name: "Community Help-AP & APay",
+      link: "https://w.amazon.com/bin/view/TRMSCommunityHelp/AP/",
     },
   ],
 
   [
-    { name: "Seller SIM", link: "https://tiny.amazon.com/ay2nln2q" },
-    { name: "Buyer SIM", link: "https://tiny.amazon.com/lcuo7fbl" },
+    { name: "AHA Exit", link: "https://issues.amazon.com/issues/create?template=5d6e64a5-b686-489b-96d1-63c1001b79b1" },
+    { name: "Bulk Merchant Tool", link: "https://paragon-na.amazon.com/hz/investigation-admin-tools" },
     { name: "Alchemist", link: "https://paragon-na.amazon.com/hz/ptt" },
     { name: "Image Assist", link: "https://image-assist.amazon.com/" },
     { name: "Brand Registry", link: "https://brandprofile.corp.amazon.com/i/" },
-    { name: "Alexa Search", link: "https://www.alexa.com/siteinfo" },
+    { name: "SIMs", link: "https://sim.amazon.com/issues/search?q=status%3A(Open)+containingFolder%3A(1539c041-32d0-46d8-b0d1-a3b9060cf5e6)&sort=createDate+asc&selectedDocument=a5313c23-042b-4eb2-bfb9-3779e79c775e" },
   ],
   [
-    { name: "AML Insight", link: "https://amlinsight.lexisnexis.com/" },
+    { name: "Outbound Lookup Tool", link: "https://mercury.amazon.com/apps/oblt/outboundLookup/packageLookup?region=na" },
     {
-      name: "Ajuda",
-      link: "https://ajuda.a2z.com/view.html?stage=Live&repo=GAEGB78MKKYZXAQ8&hierarchy=GBSV4XKBAUMNZ257&hierLayer=Global&hierLocale=en-US&marketplace=US&locale=en-US&node=G9T4C85L3T3VVSMS",
+      name: "Heartbeat 2.0",
+      link: "https://heartbeat.cs.amazon.dev/#/dashboards/visualize/7519daa2-368e-4fb1-b1a0-91c2830ee7dc",
     },
     {
-      name: "Test Buy",
-      link: "https://share.amazon.com/sites/BADSUMMIT/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b7802A4B7-3C07-44F6-BAB1-1F5752260497%7d&file=SUMMIT%20Test%20Buy%20-%20Council%20Reviewed_CM_Final.docx&action=default",
+      name: "SpearOps Tool",
+      link: "https://na-prod.spice.sps.amazon.dev/spearops",
     },
     { name: "CSI", link: "https://csi.amazon.com/view" },
-    { name: "Hubble", link: "https://hubble.amazon.com/" },
+    { name: "Hubble", link: "https://hubble.amazon.dev/" },
     {
       name: "Cradle",
       link: "https://datacentral.a2z.com/cradle?mons_redirect=sign_in&mons_redirect=sign_in#/SellerFinancialDisincentive/home?runPeriod=WEEK&status=All",
@@ -91,7 +91,7 @@ export const linkTable = [
     { name: "Spokeo", link: "https://www.spokeo.com/" },
     { name: "IP Tracker", link: "https://www.ip-tracker.org/" },
     { name: "What is my IP", link: "https://whatismyipaddress.com/ip-lookup" },
-    { name: "PEP", link: "https://www.cm1.se/en/pep-sanktionssokning/" },
+    { name: "Grass", link: "https://grass-na.aka.amazon.com/" },
   ],
   [
     { name: "EUIPO", link: "https://trademarks.ipo.gov.uk/ipo-tmcase" },
@@ -103,6 +103,15 @@ export const linkTable = [
     {
       name: "IP India",
       link: "https://ipindiaonline.gov.in/tmrpublicsearch/frmmain.aspx",
+    },
+
+    {
+      name: "CS Contacts/Concession",
+      link: "https://us-east-1.quicksight.aws.amazon.com/sn/account/amazonbi/dashboards/6c39134a-62cd-408d-af16-835f7b2905f3/sheets/6c39134a-62cd-408d-af16-835f7b2905f3_1e33be7a-0d2d-47fb-9a8d-cb9319921e0b?#",
+    },
+    {
+      name: "Sales, MFN and Ads Surge",
+      link: "https://us-east-1.quicksight.aws.amazon.com/sn/account/amazonbi/dashboards/585c1ab6-ccec-4cb5-9f82-e03986c3d913?directory_alias=amazonbi&ignore=true#",
     },
   ],
 ];
