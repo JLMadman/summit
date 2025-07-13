@@ -9,26 +9,26 @@ import "@rmwc/textfield/styles";
 import "@rmwc/button/styles";
 
 const countries = [
-  { country: "US", encryptedMarketplaceId: "ATVPDKIKX0DER" },
-  { country: "CA", encryptedMarketplaceId: "A2EUQ1WTGCTBG2" },
-  { country: "MX", encryptedMarketplaceId: "A1AM78C64UM0Y8" },
-  { country: "UK", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
-  { country: "FR", encryptedMarketplaceId: "A13V1IB3VIYZZH" },
-  { country: "DE", encryptedMarketplaceId: "A1PA6795UKMFR9" },
-  { country: "IT", encryptedMarketplaceId: "APJ6JRA9NG5V4" },
-  { country: "ES", encryptedMarketplaceId: "A1RKKUPIHCS9HS" },
-  { country: "IN", encryptedMarketplaceId: "A21TJRUUN4KGV" },
-  { country: "TR", encryptedMarketplaceId: "A33AVAJ2PDY3EV" },
-  { country: "AE", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
-  { country: "BE", encryptedMarketplaceId: "AMEN7PMS3EDWL" },
-  { country: "EG", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
-  { country: "NL", encryptedMarketplaceId: "A1805IZSGTT6HS" },
-  { country: "PL", encryptedMarketplaceId: "A1C3SOZRARQ6R3" },
-  { country: "SA", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
-  { country: "SE", encryptedMarketplaceId: "A2NODRKZP88ZB9" },
-  { country: "JP", encryptedMarketplaceId: "A75P1MG8VMU51" },
-  { country: "AU", encryptedMarketplaceId: "A75P1MG8VMU51" },
-  { country: "SG", encryptedMarketplaceId: "A75P1MG8VMU51" },
+  { label: "US - 1", value: "US", country: "US", encryptedMarketplaceId: "ATVPDKIKX0DER" },
+  { label: "CA - 7", value: "CA", country: "CA", encryptedMarketplaceId: "A2EUQ1WTGCTBG2" },
+  { label: "MX - 771770", value: "MX", country: "MX", encryptedMarketplaceId: "A1AM78C64UM0Y8" },
+  { label: "UK - 3", value: "UK", country: "UK", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { label: "FR - 5", value: "FR", country: "FR", encryptedMarketplaceId: "A13V1IB3VIYZZH" },
+  { label: "DE - 4", value: "DE", country: "DE", encryptedMarketplaceId: "A1PA6795UKMFR9" },
+  { label: "IT - 35691", value: "IT", country: "IT", encryptedMarketplaceId: "APJ6JRA9NG5V4" },
+  { label: "ES - 44551", value: "ES", country: "ES", encryptedMarketplaceId: "A1RKKUPIHCS9HS" },
+  { label: "IN - 44571", value: "IN", country: "IN", encryptedMarketplaceId: "A21TJRUUN4KGV" },
+  { label: "TR - 338851", value: "TR", country: "TR", encryptedMarketplaceId: "A33AVAJ2PDY3EV" },
+  { label: "AE - 338801", value: "AE", country: "AE", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { label: "BE - 679831071", value: "BE", country: "BE", encryptedMarketplaceId: "AMEN7PMS3EDWL" },
+  { label: "EG - 623225021", value: "EG", country: "EG", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { label: "NL - 328451", value: "NL", country: "NL", encryptedMarketplaceId: "A1805IZSGTT6HS" },
+  { label: "PL - 712115121", value: "PL", country: "PL", encryptedMarketplaceId: "A1C3SOZRARQ6R3" },
+  { label: "SA - 338811", value: "SA", country: "SA", encryptedMarketplaceId: "A1F83G8C2ARO7P" },
+  { label: "SE - 704403121", value: "SE", country: "SE", encryptedMarketplaceId: "A2NODRKZP88ZB9" },
+  { label: "JP - 6", value: "JP", country: "JP", encryptedMarketplaceId: "A75P1MG8VMU51" },
+  { label: "AU - 111172", value: "AU", country: "AU", encryptedMarketplaceId: "A75P1MG8VMU51" },
+  { label: "SG - 104444012", value: "SG", country: "SG", encryptedMarketplaceId: "A75P1MG8VMU51" },
 ];
 
 export const generateLoadLink = (org, idArray) => {
@@ -141,7 +141,7 @@ export const OrderId = () => {
             enhanced
             onChange={(evt) => setOrg(evt.currentTarget.value)}
             label="Marketplace"
-            options={countries.map(({ country }) => country)}
+            options={countries}
           />
         </div>
         <div
