@@ -34,10 +34,10 @@ const countries = [
 const buyerOptions = [
   {
     label: "Customer ID - SUMMIT",
-    value: "summit-search-by-customer-id-page",
+    value: "bri-search-by-customer-id",
     tabIndex: -1,
-    searchScopeId: "summit-search-by-customer-id",
-    program: "SUMMIT",
+    searchScopeId: "bri-search-by-customer-id",
+    program: "BRI",
   },
   {
     label: "Customer ID - B2B",
@@ -164,7 +164,7 @@ export const generateLoadLink = (
     (id) =>
       `https://paragon-${getOrg(
         org
-      )}.amazon.com/hz/dvr-search/detail?pageContext=${encodeURIComponent(
+      )}.amazon.com/hz/dvr-search/detail?tenantId=290&pageContext=${encodeURIComponent(
         JSON.stringify(
           makePageContext(selectedBuyer, id, searchScopeId, program)
         )
@@ -178,7 +178,6 @@ export const BuyerLauncher = () => {
   const [selectedBuyer, setSelectedBuyer] = useState(buyerOptions[0].value); // Default to the first buyer option
 
   const handleLoadClick = (e) => {
-    console.log("yo");
     e.preventDefault();
     const idArray = ids.split("\n").filter((possibleId) => possibleId.length);
     const selectedBuyerObj = buyerOptions.find(
@@ -218,16 +217,6 @@ export const BuyerLauncher = () => {
           />
         </div>
         <div>
-          <Select
-            value={selectedBuyer}
-            enhanced
-            onChange={(evt) => setSelectedBuyer(evt.currentTarget.value)}
-            label="Options"
-            options={buyerOptions.map((option) => ({
-              label: option.label,
-              value: option.value,
-            }))}
-          />
         </div>
         <div
           style={{
