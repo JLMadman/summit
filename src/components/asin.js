@@ -9,19 +9,27 @@ import "@rmwc/textfield/styles";
 import "@rmwc/button/styles";
 
 const countries = [
-  "US",
-  "CA",
-  "MX",
-  "UK",
-  "FR",
-  "DE",
-  "IT",
-  "ES",
-  "IN",
-  "TR",
-  "JP",
-  "CN",
-  "AU",
+  { label: "US - 1", value: "US" },
+  { label: "CA - 7", value: "CA" },
+  { label: "MX - 771770", value: "MX" },
+  { label: "BR - 526970", value: "BR" },
+  { label: "IN - 44571", value: "IN" },
+  { label: "UK - 3", value: "UK" },
+  { label: "FR - 5", value: "FR" },
+  { label: "IT - 35691", value: "IT" },
+  { label: "ES - 44551", value: "ES" },
+  { label: "DE - 4", value: "DE" },
+  { label: "BE - 679831071", value: "BE" },
+  { label: "EG - 623225021", value: "EG" },
+  { label: "NL - 328451", value: "NL" },
+  { label: "PL - 712115121", value: "PL" },
+  { label: "AE - 338801", value: "AE" },
+  { label: "SA - 338811", value: "SA" },
+  { label: "SE - 704403121", value: "SE" },
+  { label: "TR - 338851", value: "TR" },
+  { label: "JP - 6", value: "JP" },
+  { label: "AU - 111172", value: "AU" },
+  { label: "SG - 104444012", value: "SG" },
 ];
 
 export const generateLoadLink = (org, idArray) => {
@@ -36,14 +44,17 @@ export const generateLoadLink = (org, idArray) => {
     case "MX":
       domain = "https://www.amazon.com.mx/";
       break;
+       case "BR":
+      domain = "https://www.amazon.com.br/";
+      break;
+    case "IN":
+      domain = "https://www.amazon.in/";
+      break;
     case "UK":
       domain = "https://www.amazon.co.uk/";
       break;
     case "FR":
       domain = "https://www.amazon.fr/";
-      break;
-    case "DE":
-      domain = "https://www.amazon.de/";
       break;
     case "IT":
       domain = "https://www.amazon.it/";
@@ -51,8 +62,29 @@ export const generateLoadLink = (org, idArray) => {
     case "ES":
       domain = "https://www.amazon.es/";
       break;
-    case "IN":
-      domain = "https://www.amazon.in/";
+    case "DE":
+      domain = "https://www.amazon.de/";
+      break;
+    case "BE":
+      domain = "https://www.amazon.com.be/";
+      break;
+    case "EG":
+      domain = "https://www.amazon.eg/";
+      break;
+    case "NL":
+      domain = "https://www.amazon.nl/";
+      break;
+    case "PL":
+      domain = "https://www.amazon.pl/";
+      break;
+    case "AE":
+      domain = "https://www.amazon.ae/";
+      break;
+    case "SA":
+      domain = "https://www.amazon.sa/";
+      break;
+    case "SE":
+      domain = "https://www.amazon.se/";
       break;
     case "TR":
       domain = "https://www.amazon.com.tr/";
@@ -60,11 +92,11 @@ export const generateLoadLink = (org, idArray) => {
     case "JP":
       domain = "https://www.amazon.co.jp/";
       break;
-    case "CN":
-      domain = "https://www.amazon.cn/";
-      break;
-    case "AU":
+        case "AU":
       domain = "https://www.amazon.com.au/";
+      break;
+      case "SG":
+      domain = "https://www.amazon.sg/";
       break;
     default:
       return "";

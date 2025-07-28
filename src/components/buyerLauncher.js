@@ -9,47 +9,37 @@ import "@rmwc/textfield/styles";
 import "@rmwc/button/styles";
 
 const countries = [
-  "US",
-  "CA",
-  "MX",
-  "BR",
-  "AE",
-  "BE",
-  "DE",
-  "EG",
-  "ES",
-  "FR",
-  "IT",
-  "NL",
-  "PL",
-  "SA",
-  "SE",
-  "TR",
-  "UK",
-  "IN",
-  "AU",
-  "JP",
-  "SG",
+  { label: "US - 1", value: "US" },
+  { label: "CA - 7", value: "CA" },
+  { label: "MX - 771770", value: "MX" },
+  { label: "BR - 526970", value: "BR" },
+  { label: "IN - 44571", value: "IN" },
+  { label: "UK - 3", value: "UK" },
+  { label: "FR - 5", value: "FR" },
+  { label: "IT - 35691", value: "IT" },
+  { label: "ES - 44551", value: "ES" },
+  { label: "DE - 4", value: "DE" },
+  { label: "BE - 679831071", value: "BE" },
+  { label: "EG - 623225021", value: "EG" },
+  { label: "NL - 328451", value: "NL" },
+  { label: "PL - 712115121", value: "PL" },
+  { label: "AE - 338801", value: "AE" },
+  { label: "SA - 338811", value: "SA" },
+  { label: "SE - 704403121", value: "SE" },
+  { label: "TR - 338851", value: "TR" },
+  { label: "JP - 6", value: "JP" },
+  { label: "AU - 111172", value: "AU" },
+  { label: "SG - 104444012", value: "SG" },
 ];
+
+
 const buyerOptions = [
   {
-    label: "Customer ID - SUMMIT",
-    value: "summit-search-by-customer-id-page",
+    label: "Customer ID",
+    value: "bri-search-by-customer-id",
     tabIndex: -1,
-    searchScopeId: "summit-search-by-customer-id",
-    program: "SUMMIT",
-  },
-  {
-    label: "Customer ID - B2B",
-    value: "abuse-b2b-investigation-page",
-    searchScopeId: "b2b-search-by-customer-id-with-outcomes",
-    program: "AbusePrevention",
-  },
-  {
-    label: "Customer ID - Concessions",
-    value: "abuse-concessions-investigation-page",
-    searchScopeId: "concessions-search-by-customer-id-read-only",
-    program: "AbusePrevention",
+    searchScopeId: "bri-search-by-customer-id",
+    program: "BRI",
   },
 ];
 
@@ -122,7 +112,7 @@ export const generateLoadLink = (
     } else if (org === "AU") {
       pageContext.marketplaceId = "111172";
     } else if (org === "JP") {
-      pageContext.marketplaceId = "7";
+      pageContext.marketplaceId = "6";
     } else if (org === "SG") {
       pageContext.marketplaceId = "104444012";
     }
@@ -164,7 +154,7 @@ export const generateLoadLink = (
     (id) =>
       `https://paragon-${getOrg(
         org
-      )}.amazon.com/hz/dvr-search/detail?pageContext=${encodeURIComponent(
+      )}.amazon.com/hz/dvr-search/detail?tenantId=290&pageContext=${encodeURIComponent(
         JSON.stringify(
           makePageContext(selectedBuyer, id, searchScopeId, program)
         )
@@ -178,7 +168,6 @@ export const BuyerLauncher = () => {
   const [selectedBuyer, setSelectedBuyer] = useState(buyerOptions[0].value); // Default to the first buyer option
 
   const handleLoadClick = (e) => {
-    console.log("yo");
     e.preventDefault();
     const idArray = ids.split("\n").filter((possibleId) => possibleId.length);
     const selectedBuyerObj = buyerOptions.find(
@@ -218,16 +207,6 @@ export const BuyerLauncher = () => {
           />
         </div>
         <div>
-          <Select
-            value={selectedBuyer}
-            enhanced
-            onChange={(evt) => setSelectedBuyer(evt.currentTarget.value)}
-            label="Options"
-            options={buyerOptions.map((option) => ({
-              label: option.label,
-              value: option.value,
-            }))}
-          />
         </div>
         <div
           style={{
